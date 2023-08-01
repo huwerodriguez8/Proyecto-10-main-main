@@ -1,20 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {box-sizing: border-box}
+    
+    /* Set height of body and the document to 100% */
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial;
+    }
+    
+    /* Style tab links */
+    .tablink {
+      background-color: #555;
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 25%;
+    }
+    
+    .tablink:hover {
+      background-color: #777;
+    }
+    
+    /* Style the tab content (and add height:100% for full page content) */
+    .tabcontent {
+      color: white;
+      display: none;
+      padding: 100px 20px;
+      height: 100%;
+    }
+    
+    #Home {background-color: red;}
+    #News {background-color: green;}
+    #Contact {background-color: blue;}
+    #About {background-color: orange;}
+    </style>
   <title>Dewigner</title>
- </head>
- <body style="background-color: rgb(255, 255, 255)">
-  <header>
-   <img src="img/Captura de pantalla (18).png" width="150" height="150" />
-  <center><img src="img/dewigner.jpg" width="600" height="80"></center>
+  <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+  <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+  <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+  <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+  
+  <div id="Home" class="tabcontent">
+    <h3>Home</h3>
+    <p>Home is where the heart is..</p>
+  </div>
+  
+  <div id="News" class="tabcontent">
+    <h3>News</h3>
+    <p>Some news this fine day!</p> 
+  </div>
+  
+  <div id="Contact" class="tabcontent">
+    <h3>Contact</h3>
+    <p>Get in touch, or swing by for a cup of coffee.</p>
+  </div>
+  
+  <div id="About" class="tabcontent">
+    <h3>About</h3>
+    <p>Who we are and what we do.</p>
+  </div>
+  
+  <script>
+  function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+     
+    <header>
+   <img src="img/logo.png" width="150" height="150" />
+  <center><img src="img/dewigner (1).png" width="400" height="100"></center>
    <fieldset style="background-color: rgb(224, 224, 223)">
     <legend>
      <b><i>COMO SURGIO ?</i></b>
     </legend>
-
-    <p>
+<!--</1><style>
+    body {
+        background-image: url('img/');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+</style>-->
+     
+<p>
         <h2><i>Esta empresa surgio gracias al pensamiento de poder ayudar a las personas
             para poder lograr su comercio digital por medio de la creacion de paginas
             web de su empresa con el diseño y opciones que quieran ayudandolos a crecer exponencialmente su economia, tambien los
@@ -34,7 +122,7 @@
 </h2>
 
 <h3>
-    <li> Formular un plan de negocios para la creación de una unidad productiva dedicada al apoyo de publicidad y comercializacion de los negocios por medio de paginas web creando una mayor expansion de comercio en el emprendimiento del cliente generando ganancias y comodidad.</li>
+    <li><i>Formular un plan de negocios para la creación de una unidad productiva dedicada al apoyo de publicidad y comercializacion de los negocios por medio de paginas web creando una mayor expansion de comercio en el emprendimiento del cliente generando ganancias y comodidad.</i> </li>
 </h3>
     
       <h2> 
@@ -45,10 +133,10 @@
       <h3>
        
           
-      <p>1. Desarrollar páginas web para negocios que requieran mayor incorporación 
-         y mejor accesibilidad al mercado digital. </p>
-      <p>2. Brindar asesorias por medio de socios especializados en la comercializacion por medio de páginas web, almacenamiento de diseños, etc.</p>
-      <p>3.  Adquirir  computadores,inteligencia artificial, internet,desarrolladores, socios estrateticoS y ademas calcular la viabilidad financiera y economica  dependiendo del personal de trabajo, proyectos y ganacias que podamos producir a los comienzos de nuestra empresa y al pasar un tiempo de la creacion.</p>
+      <p><i>1. Desarrollar páginas web para negocios que requieran mayor incorporación 
+        y mejor accesibilidad al mercado digital. </i></p>
+      <p><i>2. Brindar asesorias por medio de socios especializados en la comercializacion por medio de páginas web, almacenamiento de diseños, etc.</i></p>
+      <p><i>3.  Adquirir  computadores,inteligencia artificial, internet,desarrolladores, socios estrateticoS y ademas calcular la viabilidad financiera y economica  dependiendo del personal de trabajo, proyectos y ganacias que podamos producir a los comienzos de nuestra empresa y al pasar un tiempo de la creacion.</i></p>
     </h3>
    </ul>
   </header>
